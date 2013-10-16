@@ -30,5 +30,18 @@ public class NumeroEntero {
     public void decrementar() {
         this.valor--;
     }
+    
+    public int suma(int valor2){
+    	return Integer.MAX_VALUE;
+    }
+    
+    public int resta(int valor2){
+    	return Integer.MIN_VALUE;
+    }
+    
+    public int multiplicacion(int valor2){
+    	return Integer.MAX_VALUE;
+    }
+    
 
 }
