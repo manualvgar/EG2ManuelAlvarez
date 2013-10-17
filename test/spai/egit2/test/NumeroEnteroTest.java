@@ -47,5 +47,20 @@ public class NumeroEnteroTest {
         this.numero.decrementar();
         assertEquals(-1, numero.getValor());
     }
+    
+    @Test
+    public void testSuma(){
+    	assertEquals(105, this.numero.suma(5));
+    }
+    
+    @Test
+    public void testResta(){
+    	assertEquals(95, this.numero.resta(5));
+    }
+    
+    @Test
+    public void testMultiplicacion(){
+    	assertEquals(500, this.numero.multiplicacion(5));
+    }
 
 }
