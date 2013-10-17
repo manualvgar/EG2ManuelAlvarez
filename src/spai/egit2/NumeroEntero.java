@@ -32,15 +32,15 @@ public class NumeroEntero {
     }
     
     public int suma(int valor2){
-    	return Integer.MAX_VALUE;
+        return (this.valor + valor2);
     }
     
     public int resta(int valor2){
-    	return Integer.MIN_VALUE;
+        return (this.valor - valor2);
     }
     
     public int multiplicacion(int valor2){
-    	return Integer.MAX_VALUE;
+        return (this.valor * valor2);
     }
     
 
