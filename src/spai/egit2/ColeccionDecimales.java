@@ -35,18 +35,27 @@ public class ColeccionDecimales {
 	}
 
 	public double menor() {
-		return -1.0;
+		double menor = Double.POSITIVE_INFINITY;
+		for (double item : this.coleccion) {
+			if (item < menor)
+				menor = item;
+		}
+		return menor;
 	}
 
 	public int tamanio() {
-		return -1;
+		return this.coleccion.size();
 	}
 
 	public double media() {
-		return -1.0;
+		return this.suma() / this.tamanio();
 	}
 
 	public double multiplicar() {
-		return -1.0;
+		double resultado = this.coleccion.get(0);
+		for(int i=1;i<this.tamanio();i++){
+			resultado *=this.coleccion.get(i);
+		}
+		return resultado;
 	}
 }
