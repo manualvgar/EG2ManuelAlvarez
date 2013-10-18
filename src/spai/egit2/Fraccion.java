@@ -76,7 +76,7 @@ public class Fraccion {
 	}
 
 	public boolean isImpropia() {
-		return false;
+		return this.getNumerador() > this.getDenominador();
 	}
 
 	public double mayor(int numerador2, int denominador2) {
