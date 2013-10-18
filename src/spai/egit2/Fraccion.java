@@ -22,64 +22,69 @@ package spai.egit2;
  * denominador, y se suman o se restan los numeradores de las fracciones
  * equivalentes obtenidas
  * 
- * Multiplicaci�n: La multiplicaci�n de dos fracciones es otra fracci�n que
- * tiene: Por numerador el producto de los numeradores. Por denominador el
+ * Multiplicaci�n: La multiplicaci�n de dos fracciones es otra fracci�n
+ * que tiene: Por numerador el producto de los numeradores. Por denominador el
  * producto de los denominadores.
  * 
- * La divisi�n de dos fracciones es otra fracci�n que tiene: Por numerador el
- * producto de los extremos. Por denominador el producto de los medios. Invertir
- * fraccion
+ * La divisi�n de dos fracciones es otra fracci�n que tiene: Por numerador
+ * el producto de los extremos. Por denominador el producto de los medios.
+ * Invertir fraccion
  * 
  * @author jbernal
  * 
  */
 public class Fraccion {
-    private int numerador;
+	private int numerador;
 
-    private int denominador;
+	private int denominador;
 
-    public Fraccion(int numerador, int denominador) {
-        this.numerador = numerador;
-        this.denominador = denominador;
-    }
+	public Fraccion(int numerador, int denominador) {
+		this.numerador = numerador;
+		this.denominador = denominador;
+	}
 
-    public Fraccion() {
-        this(1, 1);
-    }
+	public Fraccion() {
+		this(1, 1);
+	}
 
-    public int getNumerador() {
-        return numerador;
-    }
+	public int getNumerador() {
+		return numerador;
+	}
 
-    public void setNumerador(int numerador) {
-        this.numerador = numerador;
-    }
+	public void setNumerador(int numerador) {
+		this.numerador = numerador;
+	}
 
-    public int getDenominador() {
-        return denominador;
-    }
+	public int getDenominador() {
+		return denominador;
+	}
 
-    public void setDenominador(int denominador) {
-        this.denominador = denominador;
-    }
+	public void setDenominador(int denominador) {
+		this.denominador = denominador;
+	}
 
-    public double decimal() {
-        return (double) numerador / denominador;
-    }
+	public double decimal() {
+		return (double) numerador / denominador;
+	}
 
-    public boolean isPropia() {
-        boolean propia = false;
-        if(this.denominador > this.numerador){
-            propia = true;
-        }
-        return propia;
-    }
-    
-    public boolean isImpropia() {
-        return false;
-    }
-    
-    public double mayor(int numerador2, int denominador2) {
-        return 0.0;
-    }
+	public boolean isPropia() {
+		boolean propia = false;
+		if (this.denominador > this.numerador) {
+			propia = true;
+		}
+		return propia;
+	}
+
+	public boolean isImpropia() {
+		return false;
+	}
+
+	public double mayor(int numerador2, int denominador2) {
+		double f1 = this.decimal();
+		double f2 = (double) numerador2 / denominador2;
+		if (f1 >= f2)
+			return f1;
+		else
+			return f2;
+	}
 }
